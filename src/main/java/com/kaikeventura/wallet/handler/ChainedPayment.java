@@ -18,6 +18,6 @@ public class ChainedPayment {
     }
 
     private void buildChain() {
-        chain = new WalletCommander(new OpenBankingCommander(new CreditCardCommander(null)));
+        chain = new WalletCommander(new CreditCardCommander(new OpenBankingCommander(null)));
     }
 }

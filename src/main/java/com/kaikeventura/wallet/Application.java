@@ -13,9 +13,9 @@ import java.util.Arrays;
 public class Application {
 
     public static void main(String[] args) {
-        var payerWallet = new PaymentMethod(Method.WALLET, 100000);
-        var payerCreditCard = new PaymentMethod(Method.CREDIT_CARD, 0);
-        var payerOpenBanking = new PaymentMethod(Method.OPEN_BANKING, 0);
+        var payerWallet = new PaymentMethod(Method.WALLET, 125000);
+        var payerCreditCard = new PaymentMethod(Method.CREDIT_CARD, 20000);
+        var payerOpenBanking = new PaymentMethod(Method.OPEN_BANKING, 60000);
         var payer = new Payer("Kaike Ventura", Arrays.asList(payerWallet, payerOpenBanking, payerCreditCard));
 
         log.info(String.format("Payer before payment => %s", payer));
