@@ -1,4 +1,4 @@
-package com.kaikeventura;
+package com.kaikeventura.wallet.domain;
 
 import lombok.Getter;
 
