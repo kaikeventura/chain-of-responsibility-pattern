@@ -1,13 +1,14 @@
-package com.kaikeventura.wallet.handler;
+package com.kaikeventura.wallet.commanders;
 
 import com.kaikeventura.wallet.domain.Method;
 import com.kaikeventura.wallet.domain.Order;
+import com.kaikeventura.wallet.handler.OrderHandler;
 import lombok.extern.java.Log;
 
 @Log
-public class Wallet extends OrderHandler {
+public class WalletCommander extends OrderHandler {
 
-    public Wallet(OrderHandler next) {
+    public WalletCommander(OrderHandler next) {
         super(next);
     }
 

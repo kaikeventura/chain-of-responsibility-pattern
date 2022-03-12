@@ -1,5 +1,8 @@
 package com.kaikeventura.wallet.handler;
 
+import com.kaikeventura.wallet.commanders.CreditCardCommander;
+import com.kaikeventura.wallet.commanders.OpenBankingCommander;
+import com.kaikeventura.wallet.commanders.WalletCommander;
 import com.kaikeventura.wallet.domain.Order;
 
 public class ChainedPayment {
@@ -15,6 +18,6 @@ public class ChainedPayment {
     }
 
     private void buildChain() {
-        chain = new Wallet(new OpenBanking(new CreditCard(null)));
+        chain = new WalletCommander(new OpenBankingCommander(new CreditCardCommander(null)));
     }
 }
