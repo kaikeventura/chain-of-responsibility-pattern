@@ -6,6 +6,6 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class PaymentMethod {
-    private Method method;
-    private int balance;
+    private final Method method;
+    private final int balance;
 }

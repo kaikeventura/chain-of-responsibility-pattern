@@ -16,6 +16,7 @@ public class OrderCommander extends OrderHandler {
                 .get();
 
         if (order.getValue() <= walletPaymentMethod.getBalance()) {
+            order.markHandled();
             System.out.println("Payed with WALLET");
         }
         else {

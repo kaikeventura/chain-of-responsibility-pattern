@@ -16,6 +16,7 @@ public class WalletCreditCard extends OrderHandler {
                 .get();
 
         if (order.getValue() <= walletCreditCardPaymentMethod.getBalance()) {
+            order.markHandled();
             System.out.println("Payed with WALLET_CREDIT_CARD");
         }
         else {

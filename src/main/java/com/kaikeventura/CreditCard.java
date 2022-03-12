@@ -16,6 +16,7 @@ public class CreditCard extends OrderHandler {
                 .get();
 
         if (order.getValue() <= creditCardPaymentMethod.getBalance()) {
+            order.markHandled();
             System.out.println("Payed with CREDIT_CARD");
         }
         else {
